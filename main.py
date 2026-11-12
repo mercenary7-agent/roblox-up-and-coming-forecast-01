@@ -155,7 +155,7 @@ def forecast(reads, cut, places, horizon, params):
             kept += 1
             if kept >= params["max_rows"]:
                 break
-        if lst:
+        if lst and lst[0][0] not in top10:
             top10.append(lst[0][0])
     for gid, g in sorted(games.items(), key=lambda kv: kv[1]["lr"]):
         if len(top10) >= places:
