@@ -14,10 +14,10 @@ HOUR = 3600.0
 P_FLOOR_NOTE = 1e-4
 
 # ---- tuned parameters ----
-SIMS = 1500
+SIMS = 2000
 CAND_N = 35
-G_SCALE = 0.5
-REV_SCALE = 0.5
+G_SCALE = 1.0
+REV_SCALE = 1.0
 H_SCALE = 2.0
 SIGMA = 0.10
 MAX_AGE_H = 24 * 28
@@ -30,6 +30,7 @@ P_MIN = 0.002
 MAX_ROWS = 40
 SEED = 12345
 # regression fitted on the archive: dr24 = B0 + B1*g24 + B2*logrank (dr = lr_now - lr_future)
+# v2: full-scale growth coefficient (G_SCALE=1.0, REV_SCALE=1.0), 2000 sims for stabler tails
 B0 = -0.787
 B_G = 0.380
 B_R = 0.198
